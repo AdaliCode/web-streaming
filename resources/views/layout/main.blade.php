@@ -11,7 +11,8 @@
 </head>
 
 <body class="oswald-400">
-    <div class="container my-5">
+    @include('partials.navbar')
+    <div class="container my-3">
         @yield('container')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

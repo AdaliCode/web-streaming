@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\Movie;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    $movies = Movie::all();
+    return view('home', compact('movies'));
 });
-Route::get('/movie/escape-2024', function () {
+Route::get('/movie/{id}', function ($movieID) {
     return view('movie');
 });
