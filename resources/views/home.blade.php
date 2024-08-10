@@ -8,7 +8,8 @@
                     <div class="card text-bg-dark">
                         <img src="{{ asset('storage/cover.jpeg') }}" class="card-img" alt="...">
                     </div>
-                    <h5 class="text-uppercase text-center">{{ $movies[$i]->title ?? 'Maharaja' }} (2024)</h5>
+                    <h5 class="text-uppercase text-center">{{ $movies[$i]->title ?? 'Maharaja' }}
+                        ({{ $movies[$i]->release ?? 2024 }})</h5>
                 </a>
             </div>
         @endfor

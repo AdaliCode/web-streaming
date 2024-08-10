@@ -8,5 +8,6 @@ Route::get('/', function () {
     return view('home', compact('movies'));
 });
 Route::get('/movie/{id}', function ($movieID) {
-    return view('movie');
+    $movie = Movie::query()->where('id', $movieID)->first();
+    return view('movie', compact('movie'));
 });

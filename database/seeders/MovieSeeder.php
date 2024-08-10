@@ -13,10 +13,11 @@ class MovieSeeder extends Seeder
      */
     public function run(): void
     {
-        function getMovieData($title = 'Under paris')
+        function getMovieData($title = 'Under paris', $release = '2024/08/10')
         {
             $movie = new Movie();
             $movie->title = ucwords($title);
+            $movie->release = $release;
             $movie->save();
         }
         getMovieData();
