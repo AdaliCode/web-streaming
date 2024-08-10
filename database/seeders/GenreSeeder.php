@@ -23,5 +23,7 @@ class GenreSeeder extends Seeder
         }
         getGenreData();
         getGenreData('thriller');
+        getGenreData('horror');
+        getGenreData('science fiction');
     }
 }

@@ -18,6 +18,14 @@
     <p><strong>Director</strong> : Stephen Chow</p>
     <p><strong>Cast</strong> : Stephen Chow, Yuan Wah, Yuen Qiu, Lam Chi-cung, Dong Zhihua, Chiu Ci-ling, Xing Yu, DannyChan
         Kwok Khan, Leung Si-lung</p>
-    <p><strong>Genres</strong> : Korea, Thriller</p>
+    <p>
+        <strong>Genres</strong> :
+        @foreach ($movie->genres as $key => $genre)
+            {{ $genre->name }}
+            @if (!$loop->last)
+                ,
+            @endif
+        @endforeach
+    </p>
     <p><strong>Maturity Rating</strong> : 18+</p>
 @endsection

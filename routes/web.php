@@ -12,6 +12,8 @@ Route::get('/', function () {
     return view('home', compact('latestmovies', 'genres'));
 });
 Route::get('/movie/{id}', function ($movieID) {
-    $movie = Movie::query()->where('id', $movieID)->first();
+    // $movie = Movie::query()->where('id', $movieID)->first();
+    $movie = Movie::with('genres')->where('id', $movieID)->first();
+    // dd($movie);
     return view('movie', compact('movie'));
 });

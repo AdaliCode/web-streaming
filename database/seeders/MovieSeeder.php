@@ -25,5 +25,6 @@ class MovieSeeder extends Seeder
         getMovieData('despicable me 4', '2024/06/20');
         getMovieData('saving bikini bottom', '2024/08/1');
         getMovieData('deadpool & wolverine', '2024/06/24');
+        getMovieData('A Quiet Place: Day One', '2024/06/26');
     }
 }

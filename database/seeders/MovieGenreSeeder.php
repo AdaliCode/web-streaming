@@ -3,10 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\Genre;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class GenreMovieSeeder extends Seeder
+class MovieGenreSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +16,12 @@ class GenreMovieSeeder extends Seeder
     {
         function syncMovie($genreName = 'korea', $syncMovie = [2])
         {
-            $genre = Genre::find($genreName);
+            $genre = Genre::find(Str::slug($genreName));
             $genre->movies()->sync($syncMovie);
         }
         syncMovie();
-        syncMovie('thriller', [1, 2, 5]);
+        syncMovie('thriller', [1, 2, 5, 6]);
+        syncMovie('horror', 6);
+        syncMovie('science fiction', 6);
     }
 }
