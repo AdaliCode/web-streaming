@@ -13,4 +13,8 @@ class Genre extends Model
     protected $keytype = 'string';
     public $incrementing = false;
     public $timestamps = false;
+    public function movies()
+    {
+        return $this->belongsToMany(Movie::class, 'movies_genres');
+    }
 }
