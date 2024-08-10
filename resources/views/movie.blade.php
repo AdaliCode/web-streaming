@@ -21,7 +21,7 @@
     <p>
         <strong>Genres</strong> :
         @foreach ($movie->genres as $key => $genre)
-            {{ $genre->name }}
+            <a href="/movie/genre/{{ $genre->id }}">{{ $genre->name }}</a>
             @if (!$loop->last)
                 ,
             @endif
