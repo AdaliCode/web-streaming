@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('container')
-    <h1 class="text-uppercase text-center">Movie</h1>
+    <h1 class="text-uppercase text-center">Movie TERBARU</h1>
     <div class="row g-2">
         @for ($i = 0; $i < 6; $i++)
             <div class="col-md-3">

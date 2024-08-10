@@ -21,7 +21,9 @@ class MovieSeeder extends Seeder
             $movie->save();
         }
         getMovieData();
-        getMovieData('escape');
-        getMovieData('trap');
+        getMovieData('the plot', '2024/05/29');
+        getMovieData('despicable me 4', '2024/06/20');
+        getMovieData('saving bikini bottom', '2024/08/1');
+        getMovieData('deadpool & wolverine', '2024/06/24');
     }
 }
